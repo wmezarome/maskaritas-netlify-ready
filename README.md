@@ -140,22 +140,34 @@ subir el proyecto directamente a Netlify para verlo.
 
 ## 3. Cambios que harás seguido
 
-### Cambiar el logo
-El logo real de Maskaritas ya está integrado, en
-`public/images/logo/`:
-- `maskaritas-logo.png` — versión original en alta resolución
-- `maskaritas-logo-header.png` — versión optimizada para el encabezado
-  y el pie de página
-- `favicon.png` — versión pequeña usada como ícono de pestaña
+### Cambiar la tipografía
+La tipografía de los títulos grandes ("display") es **Bebas Neue** —
+condensada, en mayúsculas, con carácter de póster editorial (inspirada
+en las referencias visuales de campaña/landing que compartiste). El
+texto del cuerpo usa **Inter**. Para cambiarla:
+1. Edita el enlace de Google Fonts en cada archivo `.html` (busca
+   `fonts.googleapis.com/css2?family=...`) — hazlo en los 15 archivos.
+2. Cambia la variable `--font-display` en `src/styles/tokens.css`.
 
-Para reemplazarlo por una versión nueva del logo:
-1. Guarda tu archivo dentro de `public/images/logo/`, reemplazando
-   `maskaritas-logo-header.png` (o usa un nombre distinto).
-2. Si usas un nombre distinto, actualiza la ruta en
-   `src/js/chrome.js` (busca `maskaritas-logo-header.png`, aparece
-   dos veces: encabezado y pie de página) y en el atributo
-   `href="/images/logo/favicon.png"` de cada archivo `.html` si
-   también cambias el favicon.
+### Cambiar el logo
+Por ahora el logo es un **placeholder de texto**: la palabra
+"Maskaritas" en la tipografía editorial del sitio (ver
+`src/js/chrome.js`, funciones `renderHeader` y `renderFooter`). El
+logo real que enviaste queda guardado en `public/images/logo/` por si
+lo quieres retomar más adelante, pero no está conectado al sitio en
+este momento.
+
+Para activar un logo (el que enviaste, o uno nuevo) más adelante:
+1. Guarda tu archivo dentro de `public/images/logo/`.
+2. En `src/js/chrome.js`, busca las líneas:
+   `<a href="/" class="site-header__wordmark">Maskaritas</a>` y
+   `<span class="site-header__wordmark" ...>Maskaritas</span>`
+   y cámbialas por una etiqueta `<img>` apuntando a tu archivo, por
+   ejemplo:
+   `<a href="/"><img src="/images/logo/tu-logo.png" alt="Maskaritas" style="height:40px;"></a>`
+3. Haz lo mismo en `renderFooter` para el logo del pie de página.
+4. Opcional: actualiza `<link rel="icon" href="data:," />` en cada
+   archivo `.html` para usar tu logo como favicon.
 
 ### Cambiar la imagen del hero (y el slider)
 El hero de la página de inicio ahora es un **slider editorial**: rota

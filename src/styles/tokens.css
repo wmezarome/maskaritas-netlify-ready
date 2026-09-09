@@ -26,8 +26,11 @@
   --accent-deep: #511c18;   /* deep oxblood */
   --accent-tint: #f4e6df;   /* pale wash of the accent for backgrounds */
 
-  /* ---- Typography ---- */
-  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  /* ---- Typography ----
+     Display font: bold, tall, editorial-poster feel (per moodboard —
+     dramatic campaign headlines, magazine/streaming-landing energy).
+     Body font stays a clean utility sans for legibility. */
+  --font-display: 'Bebas Neue', 'Helvetica Neue', Arial, sans-serif;
   --font-body: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
 
   --step-2xs: clamp(0.72rem, 0.7rem + 0.1vw, 0.78rem);

@@ -1,6 +1,9 @@
 <svg viewBox="0 0 900 1125" xmlns="http://www.w3.org/2000/svg">
+  <defs><radialGradient id="c2" cx="50%" cy="38%" r="75%">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.45"/>
+  </radialGradient></defs>
   <rect width="900" height="1125" fill="#3D412A"/>
-  <rect x="0" y="0" width="900" height="1125" fill="#F1EEE7" opacity="0.04"/>
-  <circle cx="450" cy="500" r="230" fill="#F1EEE7" opacity="0.06"/>
-  <text x="450" y="520" font-family="Georgia, serif" font-size="54" fill="#F1EEE7" text-anchor="middle" opacity="0.85">HÉROES + PRINCESAS</text>
+  <rect width="900" height="1125" fill="url(#c2)"/>
+  <text x="450" y="530" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-size="52" letter-spacing="-0.5" fill="#F1EEE7" text-anchor="middle" opacity="0.92">HÉROES + PRINCESAS</text>
 </svg>

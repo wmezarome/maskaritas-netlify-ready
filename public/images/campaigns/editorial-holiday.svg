@@ -1,8 +1,12 @@
 <svg viewBox="0 0 1200 1500" xmlns="http://www.w3.org/2000/svg">
+  <defs><radialGradient id="v8" cx="50%" cy="38%" r="75%">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.45"/>
+  </radialGradient></defs>
   <rect width="1200" height="1500" fill="#70594A"/>
-  <rect x="0" y="0" width="1200" height="1500" fill="#F1EEE7" opacity="0.035"/>
-  <line x1="80" y1="1420" x2="1120" y2="1420" stroke="#F1EEE7" stroke-opacity="0.35" stroke-width="1"/>
-  <text x="80" y="1360" font-family="Georgia, 'Times New Roman', serif" font-size="96" fill="#F1EEE7" opacity="0.92">LA TEMPORADA</text>
-  <text x="80" y="1450" font-family="Georgia, 'Times New Roman', serif" font-size="96" fill="#F1EEE7" opacity="0.92">HA LLEGADO.</text>
-  <text x="80" y="90" font-family="Helvetica, Arial, sans-serif" font-size="22" letter-spacing="2" fill="#F1EEE7" opacity="0.6">NEW SEASON</text>
+  <rect width="1200" height="1500" fill="url(#v8)"/>
+  <text x="80" y="90" font-family="Helvetica, Arial, sans-serif" font-size="20" letter-spacing="4" fill="#F1EEE7" opacity="0.65">NEW SEASON</text>
+  <line x1="80" y1="1420" x2="1120" y2="1420" stroke="#F1EEE7" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="76" y="1350" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-size="104" letter-spacing="-1" fill="#F1EEE7" opacity="0.95">LA TEMPORADA</text>
+  <text x="76" y="1445" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-size="104" letter-spacing="-1" fill="#F1EEE7" opacity="0.95">HA LLEGADO.</text>
 </svg>
