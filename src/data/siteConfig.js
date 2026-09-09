@@ -64,10 +64,10 @@ export const seasons = {
     },
     featuredCollections: ['halloween', 'heroes-princesas', 'accesorios', 'calzado'],
     featuredProductSlugs: [
-      'disfraz-vampiro-infantil',
-      'disfraz-bruja-infantil',
-      'chemise-clasica-infantil',
-      'peluca-heroe-infantil',
+      'diadema-medusa-serpientes',
+      'diadema-arana-negra',
+      'mascara-oso-siniestro',
+      'mascara-monja-terror',
     ],
   },
 
