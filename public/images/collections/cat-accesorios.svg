@@ -1,0 +1,6 @@
+<svg viewBox="0 0 900 1125" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1125" fill="#70594A"/>
+  <rect x="0" y="0" width="900" height="1125" fill="#F1EEE7" opacity="0.04"/>
+  <circle cx="450" cy="500" r="230" fill="#F1EEE7" opacity="0.06"/>
+  <text x="450" y="520" font-family="Georgia, serif" font-size="54" fill="#F1EEE7" text-anchor="middle" opacity="0.85">ACCESORIOS</text>
+</svg>

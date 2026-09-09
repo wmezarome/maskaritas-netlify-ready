@@ -1,0 +1,70 @@
+/*
+  MASKARITAS — Design tokens
+  ---------------------------------------------------------------
+  Change the season's accent color here (--accent-*) to match the
+  active campaign in src/data/siteConfig.js. Everything else on the
+  site — header, catalog, cart, checkout — reads from these
+  variables, so the core experience never needs to be touched when
+  the season changes.
+*/
+
+:root {
+  /* ---- Core neutral palette (permanent, all year) ---- */
+  --bone: #f1eee7;       /* main background */
+  --bone-soft: #e9e4d9;  /* secondary panels, cards */
+  --ink: #11110f;        /* primary text, dark sections */
+  --ink-70: rgba(17, 17, 15, 0.7);
+  --ink-45: rgba(17, 17, 15, 0.45);
+  --olive: #3d412a;      /* secondary accent, links, focus */
+  --stone: #c8bcaf;      /* borders, dividers, disabled */
+  --brown: #70594a;      /* tertiary, hover states */
+  --white: #fffdf9;
+
+  /* ---- Seasonal accent — Halloween 2026 ----
+     Swap these two lines when the season changes; see siteConfig.js */
+  --accent: #9a3512;        /* burnt rust / terracotta */
+  --accent-deep: #511c18;   /* deep oxblood */
+  --accent-tint: #f4e6df;   /* pale wash of the accent for backgrounds */
+
+  /* ---- Typography ---- */
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --font-body: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+
+  --step-2xs: clamp(0.72rem, 0.7rem + 0.1vw, 0.78rem);
+  --step-xs: clamp(0.82rem, 0.8rem + 0.1vw, 0.88rem);
+  --step-sm: clamp(0.94rem, 0.92rem + 0.1vw, 1rem);
+  --step-md: clamp(1.05rem, 1rem + 0.3vw, 1.2rem);
+  --step-lg: clamp(1.4rem, 1.2rem + 1vw, 1.9rem);
+  --step-xl: clamp(2rem, 1.6rem + 2vw, 3rem);
+  --step-2xl: clamp(2.8rem, 2rem + 4vw, 5rem);
+  --step-3xl: clamp(3.6rem, 2.4rem + 7vw, 8rem);
+
+  /* ---- Spacing scale ---- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1.1rem;
+  --space-md: 1.75rem;
+  --space-lg: 2.75rem;
+  --space-xl: 4.5rem;
+  --space-2xl: 7rem;
+  --space-3xl: 10rem;
+
+  /* ---- Layout ---- */
+  --content-max: 1440px;
+  --content-pad: clamp(1.1rem, 4vw, 3rem);
+  --border-hairline: 1px solid var(--stone);
+  --radius-sm: 2px;
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-sm: 180ms;
+  --dur-md: 340ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-sm: 0ms;
+    --dur-md: 0ms;
+  }
+}

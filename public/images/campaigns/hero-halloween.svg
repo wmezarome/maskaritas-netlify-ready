@@ -1,0 +1,8 @@
+<svg viewBox="0 0 1200 1500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1500" fill="#11110F"/>
+  <rect x="0" y="0" width="1200" height="1500" fill="#F1EEE7" opacity="0.035"/>
+  <line x1="80" y1="1420" x2="1120" y2="1420" stroke="#F1EEE7" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="80" y="1360" font-family="Georgia, 'Times New Roman', serif" font-size="96" fill="#F1EEE7" opacity="0.92">LITTLE</text>
+  <text x="80" y="1450" font-family="Georgia, 'Times New Roman', serif" font-size="96" fill="#F1EEE7" opacity="0.92">MONSTERS.</text>
+  <text x="80" y="90" font-family="Helvetica, Arial, sans-serif" font-size="22" letter-spacing="2" fill="#F1EEE7" opacity="0.6">HALLOWEEN 2026 / MÉRIDA</text>
+</svg>

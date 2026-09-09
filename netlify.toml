@@ -1,0 +1,23 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+# Clean URLs: these two files are reused for every product and every
+# collection. Netlify sends the visitor's real URL (e.g. /producto/
+# disfraz-vampiro-infantil) to the matching file below with a 200 status,
+# so the address bar keeps the pretty URL while product.html / collection.html
+# read that URL and decide what to display. See README.md, section
+# "Cómo funcionan las URLs".
+[[redirects]]
+  from = "/producto/*"
+  to = "/product.html"
+  status = 200
+
+[[redirects]]
+  from = "/colecciones/*"
+  to = "/collection.html"
+  status = 200
+
+[functions]
+  node_bundler = "esbuild"

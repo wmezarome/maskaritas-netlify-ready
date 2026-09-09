@@ -1,0 +1,8 @@
+<svg viewBox="0 0 1200 1500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1500" fill="#E9E4D9"/>
+  <rect x="0" y="0" width="1200" height="1500" fill="#11110F" opacity="0.035"/>
+  <line x1="80" y1="1420" x2="1120" y2="1420" stroke="#11110F" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="80" y="1360" font-family="Georgia, 'Times New Roman', serif" font-size="96" fill="#11110F" opacity="0.92">PRIMAVERA</text>
+  <text x="80" y="1450" font-family="Georgia, 'Times New Roman', serif" font-size="96" fill="#11110F" opacity="0.92">EN ESCENA.</text>
+  <text x="80" y="90" font-family="Helvetica, Arial, sans-serif" font-size="22" letter-spacing="2" fill="#11110F" opacity="0.6">NEW SEASON</text>
+</svg>

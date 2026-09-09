@@ -1,0 +1,67 @@
+MASKARITAS — DEPLOY CHECKLIST
+==============================
+
+ANTES DE SUBIR A GITHUB
+------------------------
+Abre la carpeta del proyecto y confirma que ves ESTOS archivos y
+carpetas directamente adentro (no dentro de otra carpeta):
+
+[ ] index.html
+[ ] package.json
+[ ] package-lock.json
+[ ] netlify.toml
+[ ] vite.config.js
+[ ] .nvmrc
+[ ] .gitignore
+[ ] .env.example
+[ ] README.md
+[ ] src/
+[ ] public/
+[ ] netlify/
+
+Si en lugar de eso ves una sola carpeta (por ejemplo "maskaritas/")
+que contiene todo lo anterior adentro, sube el CONTENIDO de esa
+carpeta a GitHub — no la carpeta en sí. El repositorio de GitHub
+debe mostrar "index.html" y "package.json" apenas lo abres, en la
+primera pantalla, sin tener que entrar a ninguna subcarpeta.
+
+EN NETLIFY
+----------
+Al conectar el repositorio, configura:
+
+Base directory:      (vacío / en blanco)
+Build command:       npm run build
+Publish directory:   dist
+Functions directory: netlify/functions
+
+Luego haz clic en "Deploy site".
+
+CÓMO SABER QUE FUNCIONÓ
+------------------------
+Abre el "Deploy log" de Netlify. Debe contener líneas como:
+
+  npm run build
+  vite build
+  building for production...
+  ✓ built in ...
+
+Y el sitio debe abrir en la URL de Netlify mostrando la página de
+inicio de Maskaritas, no un error.
+
+SI ALGO SALE MAL
+------------------
+Si el log dice:
+
+  "No build steps found"
+
+o:
+
+  "Starting to deploy site from '/'"
+
+DETENTE. Esto significa que Netlify está apuntando a la carpeta
+equivocada del repositorio (probablemente hay una carpeta extra
+envolviendo el proyecto). Revisa la raíz del repositorio de GitHub:
+debe mostrar "index.html" y "package.json" de inmediato — si en vez
+de eso ves una carpeta (como "maskaritas-website/" o similar) antes
+de llegar a esos archivos, ese es el problema. Vuelve a subir solo
+el CONTENIDO de esa carpeta, directamente en la raíz del repositorio.
