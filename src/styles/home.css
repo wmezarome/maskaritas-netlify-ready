@@ -11,6 +11,27 @@
   color: var(--bone);
   overflow: hidden;
 }
+
+/* Flat mode: the slide images are pre-designed banners (headline, CTA
+   and logo already drawn into the image) — show them at their own
+   cinematic aspect ratio, at full brightness (no dimming needed since
+   there's no separate text overlay on top). */
+.hero.hero--flat {
+  min-height: 0;
+  aspect-ratio: 1983 / 793;
+}
+.hero--flat .hero__slide.is-active { opacity: 1; }
+.hero__slide-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+}
+.hero__slide-link .hero__slide { width: 100%; height: 100%; }
+@media (max-width: 760px) {
+  .hero.hero--flat { aspect-ratio: 4 / 5; }
+}
+
 .hero__image {
   position: absolute;
   inset: 0;

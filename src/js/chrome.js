@@ -52,7 +52,10 @@ function renderHeader() {
       <button class="site-header__menu-btn" id="menu-btn" aria-label="Abrir menú" aria-expanded="false">
         <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><path d="M0 1h22M0 8h22M0 15h22" stroke="currentColor" stroke-width="1.4"/></svg>
       </button>
-      <a href="/" class="site-header__wordmark">Maskaritas</a>
+      <a href="/" class="site-header__wordmark">
+        <img src="/images/logo/icon-mark-header.png" alt="" class="site-header__logo-icon" />
+        <span>Maskaritas</span>
+      </a>
       <div class="site-header__actions">
         <button class="site-header__icon-btn" id="search-btn" aria-label="Buscar">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.4"/><path d="M12.5 12.5 17 17" stroke="currentColor" stroke-width="1.4"/></svg>
@@ -98,7 +101,10 @@ function renderMobileMenu() {
   el.id = 'mobile-menu';
   el.innerHTML = `
     <div class="mobile-menu__top">
-      <span class="site-header__wordmark" style="font-size: var(--step-md);">Maskaritas</span>
+      <span class="site-header__wordmark" style="font-size: var(--step-md);">
+        <img src="/images/logo/icon-mark-header.png" alt="" class="site-header__logo-icon" style="width:24px; height:24px;" />
+        <span>Maskaritas</span>
+      </span>
       <button id="mobile-menu-close" aria-label="Cerrar menú" style="font-size: 1.6rem; line-height:1;">&times;</button>
     </div>
     <ul class="mobile-menu__list">
@@ -244,7 +250,10 @@ function renderFooter() {
   el.innerHTML = `
     <div class="wrap site-footer__grid">
       <div>
-        <div class="site-footer__wordmark">Maskaritas</div>
+        <div class="site-footer__wordmark">
+          <img src="/images/logo/icon-mark-light.png" alt="" style="width:32px; height:32px; vertical-align:middle; margin-right:0.3em;" />
+          Maskaritas
+        </div>
         <p style="margin-top: var(--space-sm); max-width: 32ch; color: var(--stone); font-size: var(--step-xs);">
           Boutique de disfraces en línea. Mérida, Yucatán.
         </p>

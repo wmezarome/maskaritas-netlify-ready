@@ -51,9 +51,9 @@ h1, h2, h3, h4, p { margin: 0; }
 --------------------------------------------------------------- */
 .display {
   font-family: var(--font-display);
-  font-weight: 400;
-  line-height: 0.92;
-  letter-spacing: 0.01em;
+  font-weight: 800;
+  line-height: 0.94;
+  letter-spacing: -0.015em;
   text-transform: uppercase;
 }
 
@@ -171,9 +171,18 @@ h1, h2, h3, h4, p { margin: 0; }
   justify-self: center;
   font-family: var(--font-display);
   font-size: var(--step-lg);
-  font-weight: 500;
-  letter-spacing: 0.03em;
+  font-weight: 800;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+}
+
+.site-header__logo-icon {
+  width: 30px;
+  height: 30px;
+  display: block;
 }
 
 .site-header__logo-img {

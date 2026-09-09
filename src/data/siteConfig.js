@@ -46,10 +46,14 @@ export const seasons = {
     // Slider editorial del hero — agrega o quita objetos para cambiar
     // cuántas imágenes rotan. Reemplaza cada "image" por tu fotografía
     // real cuando la tengas; ver README.md → "Cambiar la imagen del hero".
+    // Slides "flat": la imagen ya trae el titular, el logo y el botón
+    // dibujados encima (diseñados fuera del sitio) — el sitio NO le
+    // agrega texto propio, solo la muestra y la hace clickeable.
+    heroFlat: true,
     heroSlides: [
-      { image: '/images/campaigns/hero-halloween.svg', alt: 'Campaña Maskaritas Halloween 2026 — portada' },
-      { image: '/images/campaigns/hero-halloween-2.svg', alt: 'Campaña Maskaritas Halloween 2026 — personajes' },
-      { image: '/images/campaigns/hero-halloween-3.svg', alt: 'Campaña Maskaritas Halloween 2026 — noches' },
+      { image: '/images/campaigns/hero-halloween-flat-1.jpg', alt: 'Halloween — Maskaritas, un mundo para imaginar', href: '/colecciones/halloween' },
+      { image: '/images/campaigns/hero-halloween-flat-2.jpg', alt: 'Maskaritas — imagina, juega, disfrázate, sonríe', href: '/shop' },
+      { image: '/images/campaigns/hero-halloween-flat-3.jpg', alt: 'Un mundo para imaginar — Maskaritas', href: '/ninos' },
     ],
     accent: '#9a3512',
     accentDeep: '#511c18',
@@ -168,11 +172,11 @@ export const navCollections = [
 ];
 
 export const collectionMeta = {
-  halloween: { name: 'Halloween', subtitle: 'La temporada comienza aquí.' },
-  'heroes-princesas': { name: 'Héroes + Princesas', subtitle: 'Personajes que nunca pasan de moda.' },
-  animalitos: { name: 'Animalitos', subtitle: 'Disfraces de animales y personajes para eventos escolares.' },
-  navidad: { name: 'Navidad', subtitle: 'Personajes y disfraces para la temporada decembrina.' },
-  primavera: { name: 'Primavera / Bailables', subtitle: 'Vestuario para festivales y bailables escolares.' },
+  halloween: { name: 'Halloween', subtitle: 'La temporada comienza aquí.', coverImages: ['/images/collections/cover-halloween.jpg'] },
+  'heroes-princesas': { name: 'Héroes + Princesas', subtitle: 'Personajes que nunca pasan de moda.', coverImages: ['/images/collections/cover-heroes.jpg', '/images/collections/cover-princesas.jpg'] },
+  animalitos: { name: 'Animalitos', subtitle: 'Disfraces de animales y personajes para eventos escolares.', coverImages: ['/images/collections/cat-heroes.svg'] },
+  navidad: { name: 'Navidad', subtitle: 'Personajes y disfraces para la temporada decembrina.', coverImages: ['/images/collections/cat-accesorios.svg'] },
+  primavera: { name: 'Primavera / Bailables', subtitle: 'Vestuario para festivales y bailables escolares.', coverImages: ['/images/collections/cat-calzado.svg'] },
 };
 
 export const navComplete = [

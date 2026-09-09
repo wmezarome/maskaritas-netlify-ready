@@ -16,7 +16,11 @@ const season = getActiveSeason();
 const heroSlides = season.heroSlides && season.heroSlides.length ? season.heroSlides : [{ image: season.heroImage, alt: season.heroImageAlt }];
 
 // ---- 03 Hero ------------------------------------------------
-document.getElementById('hero').innerHTML = `
+const heroEl = document.getElementById('hero');
+heroEl.classList.toggle('hero--flat', Boolean(season.heroFlat));
+heroEl.innerHTML = season.heroFlat
+  ? heroSlidesHtml(heroSlides, escapeHtml, { flat: true })
+  : `
   ${heroSlidesHtml(heroSlides, escapeHtml)}
   <div class="hero__typo display" aria-hidden="true">MASKARITAS</div>
   <div class="hero__content">
@@ -36,7 +40,7 @@ document.getElementById('hero').innerHTML = `
     </div>
   </div>
 `;
-initHeroSlider(document.getElementById('hero'), heroSlides);
+initHeroSlider(heroEl, heroSlides);
 
 // ---- 04 Category strip ---------------------------------------
 document.getElementById('category-strip').innerHTML = `

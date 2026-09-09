@@ -27,10 +27,10 @@
   --accent-tint: #f4e6df;   /* pale wash of the accent for backgrounds */
 
   /* ---- Typography ----
-     Display font: bold, tall, editorial-poster feel (per moodboard —
-     dramatic campaign headlines, magazine/streaming-landing energy).
-     Body font stays a clean utility sans for legibility. */
-  --font-display: 'Bebas Neue', 'Helvetica Neue', Arial, sans-serif;
+     Display font: Bodoni Moda — high-contrast Didone serif, matching
+     the baked-in headline style of the provided campaign/collection
+     imagery (magazine-masthead energy: HALLOWEEN, PRINCESAS, HÉROES). */
+  --font-display: 'Bodoni Moda', 'Didot', 'Georgia', serif;
   --font-body: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
 
   --step-2xs: clamp(0.72rem, 0.7rem + 0.1vw, 0.78rem);

@@ -39,6 +39,7 @@ export function productGridHtml(productList) {
   if (!productList.length) {
     return `
       <div style="grid-column: 1 / -1; text-align:center; padding: var(--space-2xl) 0;">
+        <img src="/images/brand/rabbit-hey.png" alt="" style="width:96px; height:auto; margin:0 auto var(--space-sm);" />
         <p class="display" style="font-size: var(--step-lg);">NO LO ENCONTRAMOS.</p>
         <p style="margin-top: var(--space-xs); color: var(--ink-70);">¿Buscas algo en especial?</p>
         <div style="margin-top: var(--space-md); display:flex; gap: var(--space-sm); justify-content:center; flex-wrap:wrap;">

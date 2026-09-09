@@ -24,6 +24,21 @@ document.title = `${meta ? meta.name : 'Colección'} | Maskaritas`;
 const metaDesc = document.querySelector('meta[name="description"]');
 if (metaDesc) metaDesc.setAttribute('content', `Colección ${meta ? meta.name : ''} Maskaritas. Entregas en Mérida, Yucatán.`);
 
+const coverEl = document.getElementById('collection-cover');
+if (meta && meta.coverImages && meta.coverImages.length) {
+  coverEl.innerHTML = `
+    <div class="collection-cover">
+      ${meta.coverImages
+        .map(
+          (img) => `<div class="collection-cover__panel"><img src="${img}" alt="${escapeHtml(meta.name)}" /></div>`
+        )
+        .join('')}
+    </div>
+  `;
+} else {
+  coverEl.remove();
+}
+
 initCatalogPage({
   mountId: 'catalog-root',
   baseList: list,

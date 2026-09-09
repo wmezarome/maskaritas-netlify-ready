@@ -140,34 +140,54 @@ subir el proyecto directamente a Netlify para verlo.
 
 ## 3. Cambios que harás seguido
 
+### Cambiar la portada de una colección
+Cada página de colección (`/colecciones/halloween`, etc.) puede
+mostrar una imagen de portada arriba del catálogo. Se configura en
+`src/data/siteConfig.js`, dentro de `collectionMeta`:
+```js
+halloween: { name: 'Halloween', subtitle: '...', coverImages: ['/images/collections/tu-foto.jpg'] },
+```
+- Una sola imagen en `coverImages` → portada de ancho completo.
+- Dos imágenes → se muestran una junto a la otra (como en
+  "Héroes + Princesas", que combina dos fotos distintas).
+- Si quitas `coverImages` o lo dejas vacío, la página no muestra
+  portada, solo el título de texto.
+
+Las colecciones **Animalitos**, **Navidad** y **Primavera** todavía
+usan una imagen de marcador de posición (mismo estilo que el resto
+del sitio) porque aún no tienen fotografía propia — reemplázalas
+igual que cualquier otra portada en cuanto tengas las imágenes
+reales.
+
 ### Cambiar la tipografía
-La tipografía de los títulos grandes ("display") es **Bebas Neue** —
-condensada, en mayúsculas, con carácter de póster editorial (inspirada
-en las referencias visuales de campaña/landing que compartiste). El
-texto del cuerpo usa **Inter**. Para cambiarla:
+La tipografía de los títulos grandes ("display") es **Bodoni Moda** —
+un serif de alto contraste, en mayúsculas, estilo portada de revista
+(coincide con el titular ya dibujado en tus imágenes de campaña:
+HALLOWEEN, PRINCESAS, HÉROES). El texto del cuerpo usa **Inter**.
+Para cambiarla:
 1. Edita el enlace de Google Fonts en cada archivo `.html` (busca
    `fonts.googleapis.com/css2?family=...`) — hazlo en los 15 archivos.
 2. Cambia la variable `--font-display` en `src/styles/tokens.css`.
 
 ### Cambiar el logo
-Por ahora el logo es un **placeholder de texto**: la palabra
-"Maskaritas" en la tipografía editorial del sitio (ver
-`src/js/chrome.js`, funciones `renderHeader` y `renderFooter`). El
-logo real que enviaste queda guardado en `public/images/logo/` por si
-lo quieres retomar más adelante, pero no está conectado al sitio en
-este momento.
+El logo real de Maskaritas (conejo + máscara) ya está integrado:
+- `public/images/logo/maskaritas-logo.png` — logo completo (ícono +
+  wordmark + tagline), disponible por si lo necesitas en algún lugar.
+- `public/images/logo/icon-mark-header.png` — solo el ícono, recortado
+  y con fondo transparente, usado junto al texto "Maskaritas" en el
+  encabezado.
+- `public/images/logo/icon-mark-light.png` — el mismo ícono en color
+  claro, para el pie de página (fondo oscuro).
+- `public/images/logo/favicon.png` — versión cuadrada usada como ícono
+  de pestaña.
 
-Para activar un logo (el que enviaste, o uno nuevo) más adelante:
+Para reemplazarlo por una versión nueva:
 1. Guarda tu archivo dentro de `public/images/logo/`.
-2. En `src/js/chrome.js`, busca las líneas:
-   `<a href="/" class="site-header__wordmark">Maskaritas</a>` y
-   `<span class="site-header__wordmark" ...>Maskaritas</span>`
-   y cámbialas por una etiqueta `<img>` apuntando a tu archivo, por
-   ejemplo:
-   `<a href="/"><img src="/images/logo/tu-logo.png" alt="Maskaritas" style="height:40px;"></a>`
-3. Haz lo mismo en `renderFooter` para el logo del pie de página.
-4. Opcional: actualiza `<link rel="icon" href="data:," />` en cada
-   archivo `.html` para usar tu logo como favicon.
+2. En `src/js/chrome.js`, busca `icon-mark-header.png` (aparece en el
+   encabezado, dos veces por el menú de escritorio/móvil) e
+   `icon-mark-light.png` (pie de página) y apunta a tu nuevo archivo.
+3. Actualiza `href="/images/logo/favicon.png"` en cada archivo `.html`
+   si también cambias el favicon.
 
 ### Cambiar la imagen del hero (y el slider)
 El hero de la página de inicio ahora es un **slider editorial**: rota
@@ -184,6 +204,24 @@ flechas y puntos para navegar manualmente.
    ```
    Puedes tener 1, 2, 3 o más imágenes — si dejas solo una, el sitio
    muestra esa imagen fija, sin flechas ni puntos.
+
+**Dos modos de hero:**
+- **Modo "flat"** (el actual para Halloween): cada imagen del slider
+  YA trae su propio titular, logo y botón dibujados encima — el sitio
+  no le agrega texto, solo la muestra y hace toda la imagen
+  clickeable. Se activa con `heroFlat: true` dentro de la temporada, y
+  cada slide puede llevar un `href` (a dónde navega al hacer clic):
+  ```js
+  heroFlat: true,
+  heroSlides: [
+    { image: '/images/campaigns/tu-banner.jpg', alt: 'Descripción', href: '/colecciones/halloween' },
+  ],
+  ```
+- **Modo texto dinámico** (usado por `holiday` y `spring` mientras no
+  tengan banners propios): el sitio dibuja el titular, subtítulo y
+  botones encima de la imagen usando los campos `headlineLines`,
+  `subtitle`, `primaryCta`, etc. Se usa automáticamente cuando
+  `heroFlat` no está presente o es `false`.
 
 ### Cambiar el titular de Halloween ("LITTLE MONSTERS.")
 En `src/data/siteConfig.js`, dentro del objeto `halloween`, edita:

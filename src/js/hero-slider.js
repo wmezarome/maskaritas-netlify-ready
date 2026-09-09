@@ -58,12 +58,17 @@ export function initHeroSlider(container, slides, { interval = 6000 } = {}) {
   }
 }
 
-export function heroSlidesHtml(slides, escapeHtml) {
+export function heroSlidesHtml(slides, escapeHtml, { flat = false } = {}) {
   return `
     ${slides
-      .map(
-        (s, i) => `<img class="hero__slide ${i === 0 ? 'is-active' : ''}" src="${s.image}" alt="${escapeHtml(s.alt)}" ${i === 0 ? '' : 'loading="lazy"'} />`
-      )
+      .map((s, i) => {
+        const img = `<img class="hero__slide ${i === 0 ? 'is-active' : ''}" src="${s.image}" alt="${escapeHtml(s.alt)}" ${i === 0 ? '' : 'loading="lazy"'} />`;
+        // Flat slides are pre-designed graphics (headline/CTA already
+        // baked into the image) — the whole slide becomes one link,
+        // and the site adds no text of its own on top.
+        return flat && s.href ? `<a class="hero__slide-link" href="${s.href}" aria-label="${escapeHtml(s.alt)}">${img}</a>` : img;
+      })
+      .join('')}
       .join('')}
     ${
       slides.length > 1
