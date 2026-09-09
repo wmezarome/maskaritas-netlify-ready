@@ -29,6 +29,12 @@
     "Inventario" note in README.md.
   - images: list of paths under /images/products/. The first image is
     the cover shown on cards and search.
+
+  REGLA DE PRECIO ACTUAL (indicada por William):
+  - category: "accesorios" (que no sean máscara) → price: 150
+  - máscaras → price: 350, category: "accesorios", subcategory: "mascaras"
+  Aplica esta regla a cada producto nuevo de estas categorías salvo que
+  se indique un precio distinto.
 */
 
 export const products = [
@@ -156,7 +162,7 @@ export const products = [
     audience: 'ninos',
     description: 'Corona decorativa, el detalle que completa cualquier personaje de princesa o realeza.',
     contents: ['1 corona'],
-    price: 0,
+    price: 150,
     compareAtPrice: null,
     sizes: ['Única'],
     sizeInventory: { Única: 6 },

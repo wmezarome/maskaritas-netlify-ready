@@ -157,13 +157,21 @@ Para reemplazarlo por una versión nueva del logo:
    `href="/images/logo/favicon.png"` de cada archivo `.html` si
    también cambias el favicon.
 
-### Cambiar la imagen del hero de la temporada activa
-1. Sube tu foto a `public/images/campaigns/` (por ejemplo
-   `hero-halloween-real.jpg`).
+### Cambiar la imagen del hero (y el slider)
+El hero de la página de inicio ahora es un **slider editorial**: rota
+automáticamente entre varias imágenes con una transición suave (fade),
+flechas y puntos para navegar manualmente.
+1. Sube tus fotos a `public/images/campaigns/`.
 2. Abre `src/data/siteConfig.js`.
-3. Busca la temporada activa (`halloween`, `holiday` o `spring`) y
-   cambia el valor de `heroImage` por la ruta de tu nueva foto:
-   `heroImage: '/images/campaigns/hero-halloween-real.jpg'`
+3. Dentro de la temporada activa, edita la lista `heroSlides`:
+   ```js
+   heroSlides: [
+     { image: '/images/campaigns/tu-foto-1.jpg', alt: 'Descripción de la foto 1' },
+     { image: '/images/campaigns/tu-foto-2.jpg', alt: 'Descripción de la foto 2' },
+   ],
+   ```
+   Puedes tener 1, 2, 3 o más imágenes — si dejas solo una, el sitio
+   muestra esa imagen fija, sin flechas ni puntos.
 
 ### Cambiar el titular de Halloween ("LITTLE MONSTERS.")
 En `src/data/siteConfig.js`, dentro del objeto `halloween`, edita:

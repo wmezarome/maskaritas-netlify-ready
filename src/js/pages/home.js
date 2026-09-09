@@ -1,6 +1,7 @@
 import { mountChrome } from '../chrome.js';
 import { productGridHtml } from '../product-card.js';
 import { escapeHtml } from '../format.js';
+import { initHeroSlider, heroSlidesHtml } from '../hero-slider.js';
 import {
   getActiveSeason,
   categoryStrip,
@@ -12,10 +13,11 @@ import { getFeaturedProducts, getProductsByCollection } from '../../data/product
 mountChrome();
 
 const season = getActiveSeason();
+const heroSlides = season.heroSlides && season.heroSlides.length ? season.heroSlides : [{ image: season.heroImage, alt: season.heroImageAlt }];
 
 // ---- 03 Hero ------------------------------------------------
 document.getElementById('hero').innerHTML = `
-  <img class="hero__image" src="${season.heroImage}" alt="${escapeHtml(season.heroImageAlt)}" />
+  ${heroSlidesHtml(heroSlides, escapeHtml)}
   <div class="hero__typo display" aria-hidden="true">MASKARITAS</div>
   <div class="hero__content">
     <div>
@@ -34,6 +36,7 @@ document.getElementById('hero').innerHTML = `
     </div>
   </div>
 `;
+initHeroSlider(document.getElementById('hero'), heroSlides);
 
 // ---- 04 Category strip ---------------------------------------
 document.getElementById('category-strip').innerHTML = `

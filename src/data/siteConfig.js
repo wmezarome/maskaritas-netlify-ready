@@ -43,6 +43,14 @@ export const seasons = {
     secondaryCta: { label: 'VER NIÑOS', href: '/ninos' },
     heroImage: '/images/campaigns/hero-halloween.svg',
     heroImageAlt: 'Campaña Maskaritas Halloween 2026',
+    // Slider editorial del hero — agrega o quita objetos para cambiar
+    // cuántas imágenes rotan. Reemplaza cada "image" por tu fotografía
+    // real cuando la tengas; ver README.md → "Cambiar la imagen del hero".
+    heroSlides: [
+      { image: '/images/campaigns/hero-halloween.svg', alt: 'Campaña Maskaritas Halloween 2026 — portada' },
+      { image: '/images/campaigns/hero-halloween-2.svg', alt: 'Campaña Maskaritas Halloween 2026 — personajes' },
+      { image: '/images/campaigns/hero-halloween-3.svg', alt: 'Campaña Maskaritas Halloween 2026 — noches' },
+    ],
     accent: '#9a3512',
     accentDeep: '#511c18',
     accentTint: '#f4e6df',
@@ -74,6 +82,11 @@ export const seasons = {
     secondaryCta: { label: 'VER NIÑOS', href: '/ninos' },
     heroImage: '/images/campaigns/hero-holiday.svg',
     heroImageAlt: 'Campaña Maskaritas Navidad',
+    heroSlides: [
+      { image: '/images/campaigns/hero-holiday.svg', alt: 'Campaña Maskaritas Navidad — portada' },
+      { image: '/images/campaigns/hero-holiday-2.svg', alt: 'Campaña Maskaritas Navidad — personajes' },
+      { image: '/images/campaigns/hero-holiday-3.svg', alt: 'Campaña Maskaritas Navidad — familia' },
+    ],
     accent: '#3d412a',
     accentDeep: '#232619',
     accentTint: '#e7e9df',
@@ -100,6 +113,11 @@ export const seasons = {
     secondaryCta: { label: 'VER NIÑOS', href: '/ninos' },
     heroImage: '/images/campaigns/hero-spring.svg',
     heroImageAlt: 'Campaña Maskaritas Primavera',
+    heroSlides: [
+      { image: '/images/campaigns/hero-spring.svg', alt: 'Campaña Maskaritas Primavera — portada' },
+      { image: '/images/campaigns/hero-spring-2.svg', alt: 'Campaña Maskaritas Primavera — personajes' },
+      { image: '/images/campaigns/hero-spring-3.svg', alt: 'Campaña Maskaritas Primavera — bailables' },
+    ],
     accent: '#70594a',
     accentDeep: '#4a392f',
     accentTint: '#efe8df',
